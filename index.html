@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    /* Font */
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
   </head>
   <body>
-    <form class="js-search-form">
+    <div class="canvas js-canvas"></div>
+    <form class="form js-search-form">
       <label>
         Ville:
         <input type="text" class="js-search-input"> 
       </label>
-    </form>
+    </form>  
+    
+     
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.167.1/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.167.1/examples/jsm/"
+        }
+      }
+    </script>
     <script src="app.js" type="module"></script>
   </body>
 </html>

@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  position: relative;
+  z-index: 1;
+  font-family: "Sevillana";
+  font-weight: 400;
+  font-size: 2rem;
+  font-style: normal;
+  
+}
+
+.form input[type=text]{
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid red;
+}
