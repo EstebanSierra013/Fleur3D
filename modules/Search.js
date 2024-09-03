@@ -26,6 +26,8 @@ class Search {
     if(cityData){
       const long = cityData.lng
       const lat = cityData.lat
+      window.app.city = name
+      window.app.resetAnimation = true
       new Wind( { long, lat } )
     }else{
       alert("City does not exist")

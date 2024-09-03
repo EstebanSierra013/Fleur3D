@@ -10,7 +10,6 @@ class Wind {
   init(){
     this.buildUrl()
     this.getWindData()
-    console.log("AQUI", this.lat, this.long)
   }
   
   buildUrl() {
@@ -28,8 +27,21 @@ class Wind {
     fetch(this.url)
     .then( response => response.json())
     .then( data => {
-      console.log(data)
+      window.app.windDirection = this.changeWindDirection(data.current.wind_direction_10m)
+      document.querySelector(".js-data-direction").innerHTML +=
+      `<h2>${data.current.wind_direction_10m}</h2>`      
+      window.app.windSpeed = data.current.wind_speed_10m
+      document.querySelector(".js-data-speed").innerHTML +=
+      `<h2>${window.app.windSpeed}</h2>`
     })
+  }
+
+  changeWindDirection( windDirection ){
+    if( windDirection > 180 ) {
+      return windDirection -= 360
+    } else {
+      return windDirection
+    }
   }
 }
 

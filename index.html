@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    /* Font */
+    <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
   </head>
   <body>
+    <h1>Fleur des vents</h1>
+    <div class="info">
+      <form class="form js-search-form">
+        <label>
+          Tapez le nom d'une ville:
+          <input type="text" class="js-search-input"> 
+        </label>
+        <button type="submit">Valider</button>
+      </form>  
+      <div>
+        <div class="data">
+          <h2>Direction Vent (°):</h2>
+          <div class="js-data-direction">
+          </div>
+        </div>
+        <div class="data">
+          <h2>Vitesse Vent (km/h):</h2>
+          <div class="js-data-speed">
+          </div>
+        </div> 
+      </div> 
+    </div>         
     <div class="canvas js-canvas"></div>
-    <form class="form js-search-form">
-      <label>
-        Ville:
-        <input type="text" class="js-search-input"> 
-      </label>
-    </form>  
-    
-     
     <script type="importmap">
       {
         "imports": {
